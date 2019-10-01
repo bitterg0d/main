@@ -1,9 +1,10 @@
-= ModBook
+= ModuleBook
 ifdef::env-github,env-browser[:relfileprefix: docs/]
 
-Have you ever felt the urge to get organized but don't know how? ModBook is your one-stop destination to keep track and plan out your tasks and deadlines!
+Have you ever felt the urge to get organized but don't know how? ModuleBook is your one-stop destination to keep track and plan out your tasks and deadlines!
 
 image:https://travis-ci.org/AY1920S1-CS2103T-W13-1/main.svg?branch=master["Build Status", link="https://travis-ci.org/AY1920S1-CS2103T-W13-1/main"]
+image:https://coveralls.io/repos/github/AY1920S1-CS2103T-W13-1/main/badge.svg?branch=master["Coverage Status", link="https://coveralls.io/github/AY1920S1-CS2103T-W13-1/main?branch=master"]
 
 ifdef::env-github[]
 image::docs/images/Ui.png[width="600"]
@@ -13,8 +14,8 @@ ifndef::env-github[]
 image::docs/images/Ui.png[width="600"]
 endif::[]
 
-* ModBook is a module planning application. It has a GUI but most of the user interactions happen using a CLI (Command Line Interface).
-* ModBook helps to track deadlines and tasks, sends reminders, as well as information on modules to help students plan their timetables.
+* ModuleBook is a module planning application. It has a GUI but most of the user interactions happen using a CLI (Command Line Interface).
+* ModuleBook helps to track deadlines and tasks, sends reminders, as well as information on modules to help students plan their timetables.
 * Our target audience are currently NUS computing students, but we intend to expand our scope in future versions.
 
 == Site Map
