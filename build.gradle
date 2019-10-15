@@ -12,6 +12,7 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '4.0.4'
     id 'org.asciidoctor.convert' version '1.5.6'
     id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
 }
 
 // Specifies the entry point of the application
@@ -39,6 +40,11 @@ jacocoTestReport {
 
 test {
     useJUnitPlatform()
+}
+
+javafx {
+    version = "11.0.2"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
 dependencies {

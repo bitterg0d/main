@@ -4,6 +4,8 @@ import java.util.logging.Logger;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Accordion;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextInputControl;
 import javafx.scene.input.KeyCombination;
@@ -39,16 +41,25 @@ public class MainWindow extends UiPart<Stage> {
     private StackPane commandBoxPlaceholder;
 
     @FXML
+    private MenuBar menuBar;
+
+    @FXML
     private MenuItem helpMenuItem;
 
     @FXML
     private StackPane moduleListPanelPlaceholder;
 
     @FXML
+    private StackPane moduleViewPanelPlaceholder;
+
+    @FXML
     private StackPane resultDisplayPlaceholder;
 
     @FXML
     private StackPane statusbarPlaceholder;
+
+    @FXML
+    private Accordion accordion;
 
     public MainWindow(Stage primaryStage, Logic logic) {
         super(FXML, primaryStage);
