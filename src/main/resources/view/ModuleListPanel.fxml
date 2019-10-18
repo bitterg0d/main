@@ -2,15 +2,10 @@
 
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.layout.AnchorPane?>
 
 
-<ScrollPane prefHeight="388.0" prefWidth="338.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane prefHeight="543.0" prefWidth="731.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="388.0" prefWidth="338.0">
-         <children>
-             <ListView fx:id="moduleListView" prefHeight="388.0" prefWidth="338.0" />
-         </children>
-      </AnchorPane>
+       <ListView fx:id="moduleListView" prefHeight="732.0" prefWidth="711.0" />
   </content>
 </ScrollPane>

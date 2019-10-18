@@ -14,12 +14,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.stage.Stage?>
 
-
 <fx:root type="Stage" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <scene>
       <Scene>
          <root>
-            <VBox prefHeight="603.0" prefWidth="853.0">
+            <VBox prefHeight="800.0" prefWidth="1000.0">
                <children>
                       <MenuBar fx:id="menuBar" prefHeight="0.0" prefWidth="368.0">
                           <Menu mnemonicParsing="false" text="File">
@@ -29,23 +28,27 @@
                               <MenuItem fx:id="helpMenuItem" mnemonicParsing="false" onAction="#handleHelp" text="Help" />
                           </Menu>
                       </MenuBar>
-                  <SplitPane dividerPositions="0.4018801410105758" prefHeight="507.0" prefWidth="853.0">
+                  <SplitPane dividerPositions="0.30561122244488975" prefHeight="770.0" prefWidth="1000.0">
                      <items>
-                        <Accordion fx:id="accordion" prefHeight="262.0" prefWidth="253.0">
+                        <Accordion fx:id="accordion" prefHeight="624.0" prefWidth="300.0">
                           <panes>
                             <TitledPane collapsible="false" expanded="false" prefHeight="113.0" prefWidth="156.0" text="Home" />
-                            <TitledPane animated="false" text="Tracked Modules">
+                            <TitledPane animated="false" collapsible="false" text="Tracked Modules">
                               <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                <AnchorPane minHeight="0.0" minWidth="0.0">
                                        <children>
-                                               <StackPane fx:id="moduleListPanelPlaceholder" />
+                                          <StackPane prefHeight="687.0" prefWidth="300.0" />
                                        </children>
                                     </AnchorPane>
                               </content>
                             </TitledPane>
-                            <TitledPane animated="false" text="Archived Modules">
+                            <TitledPane animated="false" collapsible="false" text="Archived Modules">
                               <content>
-                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="244.0" prefWidth="300.0">
+                                       <children>
+                                          <StackPane />
+                                       </children>
+                                    </AnchorPane>
                               </content>
                             </TitledPane>
                           </panes>
@@ -54,32 +57,48 @@
                               <URL value="@Extensions.css" />
                            </stylesheets>
                         </Accordion>
-                        <StackPane fx:id="moduleViewPanelPlaceholder" prefHeight="262.0" prefWidth="272.0" />
+                        <SplitPane dividerPositions="0.7568627450980392" orientation="VERTICAL" prefHeight="714.0" prefWidth="688.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                         <StackPane fx:id="mainPanelPlaceholder" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                              
+                                                                                                                                                                <VBox minWidth="340.0" prefHeight="185.0" prefWidth="689.0" styleClass="pane-with-border">
+                                            <padding>
+                                                <Insets bottom="10" left="10" right="10" top="10" />
+                                            </padding>
+                                       <children>
+                                    
+                                                                                                                                                                                     <StackPane fx:id="resultDisplayPlaceholder" maxHeight="247.0" minHeight="52.0" prefHeight="82.0" prefWidth="667.0" styleClass="pane-with-border" VBox.vgrow="NEVER">
+                                                  <padding>
+                                                      <Insets bottom="5" left="10" right="10" top="5" />
+                                                  </padding>
+                                              </StackPane>
+                                    
+                                                                                                                                                                         <StackPane fx:id="commandBoxPlaceholder" prefHeight="52.0" prefWidth="667.0" styleClass="pane-with-border" VBox.vgrow="NEVER">
+                                                  <padding>
+                                                      <Insets bottom="5" left="10" right="10" top="5" />
+                                                  </padding>
+                                              </StackPane>
+                                    
+                                                                                                                                                                                                                                                    <StackPane fx:id="statusbarPlaceholder" VBox.vgrow="NEVER" />
+                                       </children>
+                                        </VBox>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
                      </items>
                   </SplitPane>
-            
-                                                                                                                                        <VBox minWidth="340.0" prefHeight="134.0" prefWidth="446.0" styleClass="pane-with-border">
-                          <padding>
-                              <Insets bottom="10" left="10" right="10" top="10" />
-                          </padding>
-                     <children>
-                  
-                                                                                                                                                             <StackPane fx:id="resultDisplayPlaceholder" maxHeight="247.0" minHeight="100" prefHeight="247.0" prefWidth="827.0" styleClass="pane-with-border" VBox.vgrow="NEVER">
-                                <padding>
-                                    <Insets bottom="5" left="10" right="10" top="5" />
-                                </padding>
-                            </StackPane>
-                  
-                                                                                                                                                 <StackPane fx:id="commandBoxPlaceholder" styleClass="pane-with-border" VBox.vgrow="NEVER">
-                                <padding>
-                                    <Insets bottom="5" left="10" right="10" top="5" />
-                                </padding>
-                            </StackPane>
-                  
-                                                                                                                                                                                                                            <StackPane fx:id="statusbarPlaceholder" VBox.vgrow="NEVER" />
-                     </children>
-                      </VBox>
                </children>
+               <stylesheets>
+                  <URL value="@DarkTheme.css" />
+                  <URL value="@Extensions.css" />
+               </stylesheets>
             </VBox>
          </root>
       </Scene>

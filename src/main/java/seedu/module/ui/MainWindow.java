@@ -47,7 +47,7 @@ public class MainWindow extends UiPart<Stage> {
     private MenuItem helpMenuItem;
 
     @FXML
-    private StackPane moduleListPanelPlaceholder;
+    private StackPane mainPanelPlaceholder;
 
     @FXML
     private StackPane moduleViewPanelPlaceholder;
@@ -60,6 +60,7 @@ public class MainWindow extends UiPart<Stage> {
 
     @FXML
     private Accordion accordion;
+
 
     public MainWindow(Stage primaryStage, Logic logic) {
         super(FXML, primaryStage);
@@ -120,7 +121,7 @@ public class MainWindow extends UiPart<Stage> {
      */
     void fillInnerParts() {
         moduleListPanel = new ModuleListPanel(logic.getDisplayedList());
-        moduleListPanelPlaceholder.getChildren().add(moduleListPanel.getRoot());
+        mainPanelPlaceholder.getChildren().add(moduleListPanel.getRoot());
 
         resultDisplay = new ResultDisplay();
         resultDisplayPlaceholder.getChildren().add(resultDisplay.getRoot());
