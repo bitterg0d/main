@@ -12,6 +12,7 @@ public class TrackedModule implements Module, Trackable {
     // Identity field
     private final ArchivedModule archivedModule;
     private List<Deadline> deadlineList = new ArrayList<>();
+    private List<Grade> gradeList = new ArrayList<>();
 
     /**
      * Every field must be present and not null.
@@ -47,6 +48,23 @@ public class TrackedModule implements Module, Trackable {
 
     public void addDeadline(Deadline deadline) {
         this.deadlineList.add(deadline);
+    }
+
+    public String getGrade() {
+        String gradeString = "Grade: \n";
+        for (int i = 0; i < gradeList.size(); i++) {
+            gradeString += ((i + 1) + ". " + gradeList.get(i).getComponent() + ": "
+                    + gradeList.get(i).getGrade() + "\n");
+        }
+        return gradeString;
+    }
+
+    public List<Grade> getGradeList() {
+        return gradeList;
+    }
+
+    public void addGrade(Grade grade) {
+        this.gradeList.add(grade);
     }
 
     /**

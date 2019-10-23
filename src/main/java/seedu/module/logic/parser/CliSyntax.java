@@ -9,4 +9,7 @@ public class CliSyntax {
     public static final Prefix PREFIX_ACTION = new Prefix("a/");
     public static final Prefix PREFIX_DESCRIPTION = new Prefix("d/");
     public static final Prefix PREFIX_TIME = new Prefix("t/");
+    public static final Prefix PREFIX_GRADE = new Prefix("g/");
+    public static final Prefix PREFIX_COMPONENT = new Prefix("c/");
+    public static final Prefix PREFIX_PERCENTAGE = new Prefix("p/");
 }

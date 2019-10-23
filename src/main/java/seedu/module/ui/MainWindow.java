@@ -59,9 +59,6 @@ public class MainWindow extends UiPart<Stage> {
     private StackPane moduleViewPanelPlaceholder;
 
     @FXML
-    private StackPane mainPanelPlaceholder;
-
-    @FXML
     private StackPane resultDisplayPlaceholder;
 
     @FXML

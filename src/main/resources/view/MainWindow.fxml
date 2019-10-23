@@ -59,7 +59,6 @@
 
                 <StackPane fx:id="statusbarPlaceholder" maxHeight="50.0" VBox.vgrow="NEVER" />
             </VBox>
-         </root>
-      </Scene>
-   </scene>
+        </Scene>
+    </scene>
 </fx:root>

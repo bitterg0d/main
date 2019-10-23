@@ -21,16 +21,16 @@
             </padding>
             <HBox alignment="CENTER_LEFT" spacing="5">
                 <Label fx:id="moduleCode" styleClass="label-bright" text="\$moduleCode" />
-               <Label fx:id="title" styleClass="label-bright" text="\$title" />
+                <Label fx:id="title" styleClass="label-bright" text="\$title" />
             </HBox>
-         <TextFlow styleClass="text-bright">
-            <children>
-               <Text fx:id="description" styleClass="text-bright" text="\$description" />
-            </children>
-         </TextFlow>
+            <TextFlow styleClass="text-bright">
+                <children>
+                    <Text fx:id="description" styleClass="text-bright" text="\$description" />
+                </children>
+            </TextFlow>
         </VBox>
-      <rowConstraints>
-         <RowConstraints />
-      </rowConstraints>
+        <rowConstraints>
+            <RowConstraints />
+        </rowConstraints>
     </GridPane>
 </HBox>
