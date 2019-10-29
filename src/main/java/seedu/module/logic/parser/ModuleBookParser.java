@@ -16,6 +16,7 @@ import seedu.module.logic.commands.HelpCommand;
 import seedu.module.logic.commands.ListCommand;
 import seedu.module.logic.commands.ViewCommand;
 import seedu.module.logic.commands.deadlineCommands.DeadlineCommand;
+import seedu.module.logic.commands.gradebookCommands.GradeCommand;
 import seedu.module.logic.parser.exceptions.ParseException;
 
 /**
@@ -44,6 +45,9 @@ public class ModuleBookParser {
         final String commandWord = matcher.group("commandWord");
         final String arguments = matcher.group("arguments");
         switch (commandWord) {
+
+        case GradeCommand.COMMAND_WORD:
+            return new GradeCommandParser().parse(arguments);
 
         case DeadlineCommand.COMMAND_WORD:
             return new DeadlineCommandParser().parse(arguments);

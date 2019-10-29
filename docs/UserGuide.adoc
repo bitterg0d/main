@@ -253,6 +253,13 @@ Edits component and weightage in percent of the respective module.
 
 Example: `grade cs2103t a/editComponent c/MIDTERMS g/40`
 
+==== `editGrade`
+Format: `grade MODULE_CODE a/edit c/COMPONENT g/GRADE`
+
+Edits grade of the respective component within the module.
+
+Example: `grade cs2103t a/editGrade c/midterms g/80/100`
+
 ==== `delete`
 Format: `grade MODULE_CODE a/delete c/COMPONENT`
 

@@ -5,4 +5,5 @@ package seedu.module.model.module;
  */
 public interface Trackable extends Module {
     String getDeadline();
+    String getGrade();
 }

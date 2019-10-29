@@ -12,4 +12,5 @@ public class CliSyntax {
     public static final Prefix PREFIX_GRADE = new Prefix("g/");
     public static final Prefix PREFIX_COMPONENT = new Prefix("c/");
     public static final Prefix PREFIX_PERCENTAGE = new Prefix("p/");
+    public static final Prefix PREFIX_GRADE_INDEX = new Prefix("i/");
 }

@@ -24,13 +24,20 @@ public class GradeCommandParser implements Parser<GradeCommand>  {
             throw new ParseException(
                     String.format(MESSAGE_INVALID_COMMAND_FORMAT, GradeCommand.MESSAGE_USAGE));
         }
-        ArgumentMultimap argMultimap = ArgumentTokenizer.tokenize(args, PREFIX_ACTION, PREFIX_DESCRIPTION, PREFIX_TIME);
+        ArgumentMultimap argMultimap = ArgumentTokenizer.tokenize(args, PREFIX_GRADE_INDEX, PREFIX_ACTION, PREFIX_COMPONENT, PREFIX_GRADE, PREFIX_PERCENTAGE);
         try {
             if (!argMultimap.getValue(PREFIX_ACTION).isPresent()) {
                 throw new ParseException("Input format error. a/ACTION not found");
             }
-            if (argMultimap.getValue(PREFIX_ACTION).get().equals("add")) {
-                return new AddGradeCommandParser().parse(argMultimap);
+            if (argMultimap.getValue(PREFIX_ACTION).get().equals("addComponent")) {
+                ArgumentMultimap newArgMultimap = ArgumentTokenizer.tokenize(args, PREFIX_ACTION,
+                        PREFIX_COMPONENT, PREFIX_PERCENTAGE);
+                return new AddComponentCommandParser().parse(newArgMultimap);
+            }
+            if (argMultimap.getValue(PREFIX_ACTION).get().equals("addGrade")) {
+                ArgumentMultimap newArgMultimap = ArgumentTokenizer.tokenize(args, PREFIX_ACTION,
+                        PREFIX_COMPONENT, PREFIX_GRADE);
+                return new AddGradeCommandParser().parse(newArgMultimap);
             } else {
                 throw new ParseException("Command not recognised");
             }

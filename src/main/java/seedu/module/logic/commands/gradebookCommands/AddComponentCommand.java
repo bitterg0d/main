@@ -10,11 +10,11 @@ import seedu.module.model.module.TrackedModule;
 
 import java.util.List;
 
-public class AddGradeCommand  extends GradeCommand {
+public class AddComponentCommand extends GradeCommand {
     private final Index index;
     private final Grade grade;
 
-    public AddGradeCommand(Index index, Grade grade) {
+    public AddComponentCommand(Index index, Grade grade) {
         this.index = index;
         this.grade = grade;
     }
@@ -41,8 +41,8 @@ public class AddGradeCommand  extends GradeCommand {
      * {@code moduleToEdit}.
      */
     private String generateSuccessMessage(TrackedModule moduleToAddGrade) {
-        String message = !grade.getGrade().isEmpty() ? MESSAGE_ADD_GRADE_SUCCESS
-                : MESSAGE_DELETE_GRADE_SUCCESS;
+        String message = !grade.getGrade().isEmpty() ? MESSAGE_ADD_COMPONENT_SUCCESS
+                : MESSAGE_DELETE_COMPONENT_SUCCESS;
         return String.format(message, moduleToAddGrade);
     }
 }
